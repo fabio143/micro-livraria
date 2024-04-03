@@ -1,13 +1,17 @@
 syntax = "proto3";
 
+        // Definição do Servico
 service ShippingService {
+        // Operações
     rpc GetShippingRate(ShippingPayload) returns (ShippingResponse) {}
 }
-
+    
+        // Definição da entrada
 message ShippingPayload {
     string cep = 1;
 }
-
+        
+        // Definição da saída
 message ShippingResponse {
     float value = 1;
 }
